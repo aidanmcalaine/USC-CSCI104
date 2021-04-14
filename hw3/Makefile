@@ -6,7 +6,7 @@ OBJS = coloring.o
 all : coloring 
 
 coloring: $(OBJS)
-		  $(CXX) $(CXXFLAGS) $(DEFS) $(OBJS)
+		  $(CXX) $(CXXFLAGS) $(DEFS) $(OBJS) -o coloring 
 coloring.o: 
 		  $(CXX) $(CXXFLAGS) $(DEFS) -o $@ -c coloring.cpp
 
