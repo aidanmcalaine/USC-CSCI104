@@ -6,7 +6,7 @@ OBJS = floorplan.o
 all : floorplan
 
 floorplan: $(OBJS)
-		  $(CXX) $(CXXFLAGS) $(DEFS) $(OBJS)
+		  $(CXX) $(CXXFLAGS) $(DEFS) $(OBJS) -o floorplan
 floorplan.o: 
 		  $(CXX) $(CXXFLAGS) $(DEFS) -o $@ -c floorplan.cpp
 
