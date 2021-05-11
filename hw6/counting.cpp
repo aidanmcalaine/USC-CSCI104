@@ -1,7 +1,7 @@
 //Aidan McAlaine 
 //Hw6
-#include "HashTable.h"
-#include "HashTable.cpp"
+#include "Hashtable.h"
+#include "Hashtable.cpp"
 #include <bits/stdc++.h>
 #include <iostream>
 #include <ctime>
