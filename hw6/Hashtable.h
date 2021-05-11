@@ -9,10 +9,10 @@
 #include <map>
 using namespace std; 
 
-class HashTable {
+class Hashtable {
 public: 
 
-	HashTable(bool debug = false, unsigned int probing = 0); 
+	Hashtable(bool debug = false, unsigned int probing = 0); 
 	/* Hash table constructor
 	probing will always be 0, 1, or 2.0 
 	0 - linear probing
@@ -20,7 +20,7 @@ public:
 	2 - double hashing 
 	*/
 
-	~HashTable(); 
+	~Hashtable(); 
 	//Destructor 
 
 	void add(string k); 

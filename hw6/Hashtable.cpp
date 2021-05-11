@@ -8,7 +8,7 @@
 #include <time.h>
 using namespace std; 
 
-HashTable::HashTable(bool debug, unsigned int probing) {
+Hashtable::Hashtable(bool debug, unsigned int probing) {
 
 	//Initialize prime number array 
 	primeNumbers[0] = 11, primeNumbers[1] = 23, primeNumbers[2] = 47, primeNumbers[3] = 97,
@@ -52,11 +52,11 @@ HashTable::HashTable(bool debug, unsigned int probing) {
 	this->table = new pair<string, int>*[primeNumbers[primeNumberIndex]];  
 }
 
-HashTable::~HashTable() {
+Hashtable::~Hashtable() {
 
 }
 
-void HashTable::add(string k) { 
+void Hashtable::add(string k) { 
 	
 	 
 	//we first need to check if k is in the hashtable 
@@ -144,7 +144,7 @@ void HashTable::add(string k) {
 	} 
 }
 
-int HashTable::count(string k) {
+int Hashtable::count(string k) {
 	//we need to check if k is in the hash table 
 	for (int i = 0; i < m; i++) {
 		//check each index for the string 
@@ -156,7 +156,7 @@ int HashTable::count(string k) {
 	return 0; 
 }
 
-void HashTable::reportAll(ostream& ofile) const {
+void Hashtable::reportAll(ostream& ofile) const {
 	//output every key value pair to an ostream in the order they appear in the hash table 
 	for (int i = 0; i < m; i++) {
 		if (table[i] != NULL) {
@@ -166,7 +166,7 @@ void HashTable::reportAll(ostream& ofile) const {
 	}
 }
 
-void HashTable::resize() {
+void Hashtable::resize() {
 
 	//first need to create a new HashTable
 
@@ -209,7 +209,7 @@ void HashTable::resize() {
 }
 
 //hash function 
-int HashTable::hash(string k) const {
+int Hashtable::hash(string k) const {
 
 	//First, we need to translate each letter into a value between 0 and 25
 	unsigned long long int stringVal = 0; 
@@ -272,7 +272,7 @@ int HashTable::hash(string k) const {
 	}
 }
 
-int HashTable::h(string w) const {
+int Hashtable::h(string w) const {
 
 	//Much of the code will be similar to the last hash function (getting the w values)
 
@@ -335,15 +335,15 @@ int HashTable::h(string w) const {
 	return h; 
 }
 
-void HashTable::setDebug(bool x) {
+void Hashtable::setDebug(bool x) {
 	debugger = x; 
 }
 
-void HashTable::setProbe(int y) {
+void Hashtable::setProbe(int y) {
 	probe = y; 
 }
 
-int HashTable::findVal(string k) {
+int Hashtable::findVal(string k) {
 	//find the value that a string will be inserted at
 	int hashNum = hash(k); 
 

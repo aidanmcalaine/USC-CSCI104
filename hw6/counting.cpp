@@ -16,7 +16,7 @@ int main(int argc, char* argv[]) {
 	clock_t start; 
 	double duration; 
 	//first create the hash table
-	HashTable ht = new HashTable(false, 0); 
+	Hashtable ht = new Hashtable(false, 0); 
 	map<string, int> mapper; 
 
 	// //input file at 1, output file at 2, x at 3, d at 4, r at 5
